@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-dark overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply w-full max-w-[1320px] mx-auto px-5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer border-none outline-none font-sans;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-br from-primary to-primary-dark text-white shadow-btn hover:-translate-y-1 hover:shadow-btn-hover;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  .section-heading {
+    @apply text-4xl mb-5 font-extrabold text-center text-dark relative pb-5 font-heading;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-br from-primary to-primary-dark rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d2d2d7;
+    border-radius: 99px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
